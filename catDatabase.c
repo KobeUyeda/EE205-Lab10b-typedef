@@ -17,7 +17,7 @@
 #include "catDatabase.h"
 
 // ***** Initialize the Gloabl Variable *****
-size_t amountOfCats = 0;
+NumCats amountOfCats = 0;
 
 struct catData catLists[MAX_DATABASE_LENGTH] = {};
 
@@ -32,7 +32,7 @@ bool isNameValid(const char name[MAX_NAME_LENGTH]){
         fprintf(stderr, "%s ...Too Long: The name you entered [%s] is to long and needs to be less than %d\n", DATABASE_FILE_NAME, name, MAX_NAME_LENGTH);
         error = false;
     }
-    for(size_t i = 0; i < amountOfCats; i++){
+    for(NumCats i = 0; i < amountOfCats; i++){
         if (strcmp(name, catLists[i].name) == 0){
             fprintf(stderr, "%s ...Same Name: This name [%s] has been already used within the database\n", DATABASE_FILE_NAME, name);
             error = false;
@@ -41,7 +41,7 @@ bool isNameValid(const char name[MAX_NAME_LENGTH]){
     return error;
 }
 
-bool isIndexValid(const size_t index){
+bool isIndexValid(const NumCats index){
     if (index >= amountOfCats){
         fprintf(stderr, "%s ...Index out of Range: the index [%ld] input into the function must be in range of 0-%ld\n", DATABASE_FILE_NAME, index, amountOfCats);
         return false;
@@ -74,7 +74,7 @@ bool isDatabaseFull(){
 bool databaseFix(){
     bool error = false;
 
-    for (size_t i = 0; i < amountOfCats; i++){
+    for (NumCats i = 0; i < amountOfCats; i++){
         if (isNameValid(catLists[i].name) || isWeightValid(catLists[i].weight)){
             deleteCat(i);
             error = true;
@@ -96,7 +96,7 @@ bool isNameInDatabaseValid(const char name[MAX_NAME_LENGTH]){
         fprintf(stderr, "%s ...Too Long: The name you entered [%s] is to long and needs to be less than %d\n", DATABASE_FILE_NAME, name, MAX_NAME_LENGTH);
         error = false;
     }
-    for(size_t i = 0; i < amountOfCats; i++){
+    for(NumCats i = 0; i < amountOfCats; i++){
         if (strcmp(name, catLists[i].name) == 0){
             if(sameName == SHOWS_UP_TWICE){
                 fprintf(stderr, "%s ...Same Name: This name [%s] has been already used within the database\n", DATABASE_FILE_NAME, name);
@@ -110,7 +110,7 @@ bool isNameInDatabaseValid(const char name[MAX_NAME_LENGTH]){
 
 bool isDatabaseValid(){
     bool error = true;
-    for (size_t i = 0; i < amountOfCats; i++){
+    for (NumCats i = 0; i < amountOfCats; i++){
         if (isNameInDatabaseValid(catLists[i].name) == false || isWeightValid(catLists[i].weight) == false){
 #ifdef DEBUG
             printf("Name Valid: %d, Weight Valid: %d\n", isNameValid(catLists[i].name) == false, isWeightValid(catLists[i].weight)==false);

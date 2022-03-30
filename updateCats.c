@@ -15,7 +15,7 @@
 #include <string.h>
 
 // updates cat name
-int updateCatName(const size_t index, const char newName[]){
+int updateCatName(const NumCats index, const char newName[]){
     if(isNameValid(newName) == false || isIndexValid(index) == false){
 #ifdef DEBUG
         printf("Name Vaild: %d, Index Valid: %d\n", isNameValid(newName), isIndexValid(index));
@@ -27,7 +27,7 @@ int updateCatName(const size_t index, const char newName[]){
     return 1;
 }
 // updates the status of fixed to true
-int fixCat(const size_t index){
+int fixCat(const NumCats index){
     if (isIndexValid(index) == false){
 #ifdef DEBUG
         printf("Index Valid: %d\n", isIndexValid(index));
@@ -40,7 +40,7 @@ int fixCat(const size_t index){
 }
 
 // update the weight of the cat
-int updateCatWeight(const size_t index, const Weight newWeight){
+int updateCatWeight(const NumCats index, const Weight newWeight){
     if (isIndexValid(index) == false || isWeightValid(newWeight) == false){
 #ifdef DEBUG
         printf("Index Valid: %d, Weight Valid: %d\n", isIndexValid(index), isWeightValid(newWeight));
@@ -52,7 +52,7 @@ int updateCatWeight(const size_t index, const Weight newWeight){
     return 1;
 }
 // This is to update the collar colors
-int updateCatCollar1(const size_t index, enum color newCollarColor){
+int updateCatCollar1(const NumCats index, enum color newCollarColor){
     if (isIndexValid(index) == false){
 #ifdef DEBUG
         printf("Index Valid: %d\n", isIndexValid(index));
@@ -64,7 +64,7 @@ int updateCatCollar1(const size_t index, enum color newCollarColor){
     return 1;
 }
 
-int updateCatCollar2(const size_t index, enum color newCollarColor){
+int updateCatCollar2(const NumCats index, enum color newCollarColor){
     if (isIndexValid(index) == false){
 #ifdef DEBUG
         printf("Index Valid: %d\n", isIndexValid(index));
@@ -77,7 +77,7 @@ int updateCatCollar2(const size_t index, enum color newCollarColor){
 }
 
 // Updates the license number
-int updateLicense (const size_t index, unsigned long long newLicense){
+int updateLicense (const NumCats index, unsigned long long newLicense){
     if (isIndexValid(index) == false){
 #ifdef DEBUG
         printf("Index Valid: %d\n", isIndexValid(index));

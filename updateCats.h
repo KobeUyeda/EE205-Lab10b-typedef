@@ -12,9 +12,9 @@
 #pragma once
 #include "catDatabase.h"
 
-extern int updateCatName(const size_t index, const char newName[]);
-extern int fixCat(const size_t index);
-extern int updateCatWeight(const size_t index, const Weight newWeight);
-extern int updateCatCollar1(const size_t index, enum color newCollarColor);
-extern int updateCatCollar2(const size_t index, enum color newCollarColor);
-extern int updateLicense (const size_t index, unsigned long long newLicense);
+extern int updateCatName(const NumCats index, const char newName[]);
+extern int fixCat(const NumCats index);
+extern int updateCatWeight(const NumCats index, const Weight newWeight);
+extern int updateCatCollar1(const NumCats index, enum color newCollarColor);
+extern int updateCatCollar2(const NumCats index, enum color newCollarColor);
+extern int updateLicense (const NumCats index, unsigned long long newLicense);

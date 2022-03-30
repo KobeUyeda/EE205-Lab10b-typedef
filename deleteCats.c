@@ -26,7 +26,7 @@ int deleteCat(int index){
         return -1;
     }
 
-    for(size_t i = index; i < amountOfCats; i++){
+    for(NumCats i = index; i < amountOfCats; i++){
         strcpy(catLists[i].name, catLists[i+1].name);
 
         catLists[i].gender       = catLists[i+1].gender;

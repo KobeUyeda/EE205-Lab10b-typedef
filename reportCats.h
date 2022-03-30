@@ -13,6 +13,6 @@
 #pragma once
 #include <stdio.h>
 
-extern void printCat(const size_t index);
+extern void printCat(const NumCats index);
 extern void printAllCats();
 extern int findCat(const char name[]);

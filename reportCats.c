@@ -69,7 +69,7 @@ char* colorName (const enum color collarColor){
 }
 
 // ***** Report functions *****
-void printCat(const size_t index){
+void printCat(const NumCats index){
     if (isIndexValid(index) == false){
         fprintf(stderr, "%s ...animalFarm0: Bad cat [%lu] \n", REPORT_CATS_FILE_NAME, index);
     }
