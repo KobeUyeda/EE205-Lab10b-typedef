@@ -20,6 +20,8 @@
 enum color{BLACK, WHITE, RED, BLUE, GREEN, PINK};
 enum genderType{UNKNOWN_GENDER, MALE, FEMALE};
 enum breedType{UNKOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
+typedef float Weight;
+
 struct catData {
     char name[MAX_NAME_LENGTH];
     enum genderType gender;
@@ -27,7 +29,7 @@ struct catData {
     enum color      collarColor1;
     enum color      collarColor2;
     bool isFixed;
-    float weight;
+    Weight weight;
     unsigned long long license;
 };
 
@@ -40,7 +42,7 @@ extern struct catData catLists[MAX_DATABASE_LENGTH];
 // This Section just validates input data
 extern bool isNameValid(const char name[MAX_NAME_LENGTH]);
 extern bool isIndexValid(const size_t index);
-extern bool isWeightValid(const float weight);
+extern bool isWeightValid(const Weight weight);
 extern bool isDatabaseFull();
 
 // Deals with the database

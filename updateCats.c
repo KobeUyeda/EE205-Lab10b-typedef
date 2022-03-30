@@ -40,7 +40,7 @@ int fixCat(const size_t index){
 }
 
 // update the weight of the cat
-int updateCatWeight(const size_t index, const float newWeight){
+int updateCatWeight(const size_t index, const Weight newWeight){
     if (isIndexValid(index) == false || isWeightValid(newWeight) == false){
 #ifdef DEBUG
         printf("Index Valid: %d, Weight Valid: %d\n", isIndexValid(index), isWeightValid(newWeight));

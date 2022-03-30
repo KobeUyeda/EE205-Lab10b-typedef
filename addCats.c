@@ -20,7 +20,7 @@ int addCat(
         const enum genderType gender,
         const enum breedType breed,
         const bool isFixed,
-        const float weight,
+        const Weight weight,
         const enum color collarColor1,
         const enum color collarColor2,
         const unsigned long long license

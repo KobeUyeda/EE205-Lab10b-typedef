@@ -49,8 +49,8 @@ bool isIndexValid(const size_t index){
     return true;
 }
 
-bool isWeightValid(const float weight){
-    const float WEIGHT_GREATER_THAN_VALID = 0;
+bool isWeightValid(const Weight weight){
+    const Weight WEIGHT_GREATER_THAN_VALID = 0;
 
     if (weight <= WEIGHT_GREATER_THAN_VALID){
         fprintf(stderr, "%s ...Invalid Weight: The weight must be greater than 0", DATABASE_FILE_NAME);
